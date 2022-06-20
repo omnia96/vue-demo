@@ -1,23 +1,23 @@
 <template>
   <v-app>
+    <v-app-bar color="primary"></v-app-bar>
     <v-main>
-      <v-app-bar color="primary"></v-app-bar>
       <router-view></router-view>
-      <div class="tab-bar">
-        <v-bottom-navigation v-model="value" color="primary" bg-color="white">
-          <div class="tab-bar-content">
-            <template v-for="(item, index) in tabs">
-              <v-btn :value="item.value" @click="tabChange(item.value)">
-                <div class="tab-bar-item">
-                  <v-icon>{{item.icon}}</v-icon>
-                  <span>{{item.label}}</span>
-                </div>
-              </v-btn>
-            </template>
-          </div>
-        </v-bottom-navigation>
-      </div>
     </v-main>
+    <div class="tab-bar">
+      <v-bottom-navigation v-model="value" color="primary" bg-color="white">
+        <div class="tab-bar-content">
+          <template v-for="(item, index) in tabs">
+            <v-btn :value="item.value" @click="tabChange(item.value)">
+              <div class="tab-bar-item">
+                <v-icon>{{item.icon}}</v-icon>
+                <span>{{item.label}}</span>
+              </div>
+            </v-btn>
+          </template>
+        </div>
+      </v-bottom-navigation>
+    </div>
   </v-app>
 </template>
 <script setup>

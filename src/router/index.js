@@ -3,9 +3,9 @@ import Home from '../pages/home.vue';
 import BaseLayout from '../layouts/base.layout.vue';
 import BlockLayout from '../layouts/block.layout.vue';
 import BackLayout from '../layouts/back.layout.vue';
-import {useDisplay} from "vuetify";
 import {RuntimeEnv} from "../core/utils/runtime-env";
 const routes = [
+  {path: '', redirect: '/home'},
   {
     path: '',
     component: BaseLayout,
@@ -32,7 +32,6 @@ const routes = [
       {path: 'user-info', component: () => import('../pages/user-info.vue'), name: 'user-info'},
     ],
   },
-  {path: '', redirect: '/home'},
 ];
 
 const router = createRouter({
