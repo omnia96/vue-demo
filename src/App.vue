@@ -1,9 +1,7 @@
 <template>
   <v-app>
     <v-main>
-      <v-app-bar color="primary"></v-app-bar>
       <router-view></router-view>
-      <HelloWorld/>
     </v-main>
   </v-app>
 </template>
