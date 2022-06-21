@@ -1,4 +1,5 @@
 import axios from "axios";
+import Snackbar from "./snackbar";
 
 const request = (path, method) => {
   // console.log(import.meta.env);
@@ -16,11 +17,12 @@ const responseInterceptor = (response) => {
 };
 /**
  * 错误处理
- * @param error {{response: any}}
+ * @param error {{response: any, message: string}}
  * @returns {Promise<never>}
  */
 const errorHandle = (error) => {
   // console.log(error.response.data.toString())
+  Snackbar.error(error.message);
   return Promise.reject(error);
 };
 
