@@ -1,9 +1,9 @@
-import {ActionSheet} from "@varlet/ui";
-import '@varlet/ui/es/action-sheet/style/index.js';
+import {Snackbar} from "@varlet/ui";
+import '@varlet/ui/es/snackbar/style/index.js';
 
 const varletUi = {
     install: (app) => {
-        app.use(ActionSheet);
+        app.use(Snackbar);
     },
 };
 export default varletUi;
