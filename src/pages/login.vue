@@ -7,6 +7,7 @@
         color="red"
     ></v-text-field>
     <v-btn @click="Snackbar.success()">sss</v-btn>
+    <var-action-sheet :show="true"></var-action-sheet>
   </div>
 </template>
 <script setup>
