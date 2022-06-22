@@ -1,10 +1,12 @@
 <template>
-  <div>111</div>
+  <div>
+    <v-btn @click="drawer = !drawer">侧边栏</v-btn>
+  </div>
 </template>
 
 <script setup>
-import {get} from "../core/utils/request";
-
+import {inject} from "vue";
+const drawer = inject('drawer')
 </script>
 
 <style scoped>

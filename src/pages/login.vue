@@ -13,6 +13,7 @@
 <script setup>
 import {post} from "../core/utils/request";
 import Snackbar from "../core/utils/snackbar";
+import {inject} from "vue";
 post("/api/user/getcode").then(data => {
   console.log(data);
   Snackbar.success(data.toString());

@@ -3,12 +3,13 @@ import Home from '../pages/home.vue';
 import BaseLayout from '../layouts/base.layout.vue';
 import BlockLayout from '../layouts/block.layout.vue';
 import BackLayout from '../layouts/back.layout.vue';
+import DrawerLayout from '../layouts/drawer.layout.vue';
 import {RuntimeEnv} from "../core/utils/runtime-env";
 const routes = [
   {path: '', redirect: '/home'},
   {
     path: '',
-    component: BaseLayout,
+    component: DrawerLayout,
     name: 'base-layout',
     children: [
       {path: 'home', component: Home, name: 'home'},

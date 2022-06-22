@@ -2,6 +2,7 @@
   <v-app>
     <v-app-bar color="primary"></v-app-bar>
     <v-main>
+      {{type}}
       <router-view></router-view>
     </v-main>
     <div class="tab-bar">
@@ -21,13 +22,12 @@
   </v-app>
 </template>
 <script setup>
-import {ref} from "vue";
+import {provide, ref} from "vue";
 import {useRoute, useRouter} from "vue-router";
 
 const router = useRouter();
 const value = ref(useRouter().currentRoute.value.name);
 console.log(useRoute(), useRouter());
-console.log();
 const tabs = ref([
   {label: '首页', value: 'home', icon: 'mdi-home'},
   {label: '关于', value: 'about', icon: 'mdi-heart'},
@@ -35,6 +35,9 @@ const tabs = ref([
 const tabChange = (val) => {
   router.push({name: val});
 };
+defineProps({
+  type: {type: String, default: '2222'},
+})
 
 </script>
 <style lang="scss">
